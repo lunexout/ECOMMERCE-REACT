@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: defaultFONT;
+  src: url("./fonts/FjallaOne-Regular.ttf");
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.defFont {
+  font-family: defaultFONT;
+  font-weight: bold;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header__navigation {
+  height: 50px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.left__header__items {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right__header__items {
+  width: 180px;
+   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__line {
+  width: 100%;
+  background-color: #dbdbdb;
+  height: 1px;
+}
+.navbar_navigation {
+  height: 80px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.left__navbar__navigation {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.nav__items {
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+.menu__icon {
+  display: none;
+}
+.swiper-button-prev {
+  background-color: #FFFFFF;
+  position: absolute !important;
+  top: 120px !important;
+  left: auto !important;
+  right: 310px !important;
+  border-radius: 50%;
+  width: 50px !important;
+  height:50px !important;
+  color: black !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 10px !important;
+  font-weight: bolder;
+}
+.swiper-button-next {
+  font-size: 10px !important;
+  color: black !important;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 120px !important;
+  left: auto !important;
+  right: 240px !important;
+  border-radius: 50%;
+  width: 50px !important;
+  height:50px !important;
+}
+@media all and (max-width: 400px) {
+  .logo__name {
+    display: none;
+  }
+  .discount__text {
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 560px) {
 }
 
-.App-link {
-  color: #61dafb;
+@media all and (max-width: 665px) {
+  .menu__icon {
+    display: block !important;
+    margin-left: auto;
+    /* padding-right: 20px; */
+  }
+  .nav__items {
+    display: none;
+  }
+  .left__navbar__navigation {
+    width: 100%;
+  }
+  .right__navbar__navigation {
+    margin-top: 10px;
+  }
+}
+@media all and (max-width: 810px) {
+  .left__header__items {
+    display: none;
+  }
+  .right__header__items {
+    display: none;
+  }
+  .header__navigation {
+    justify-content: center;
+  }
+  .swiper-button-next {
+    display: none !important;
+  }
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+@media all and (max-width: 1155px) {
+  .navbar_navigation {
+    justify-content: center;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
