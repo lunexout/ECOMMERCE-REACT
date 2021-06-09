@@ -1,0 +1,15 @@
+.auth__button {
+    padding: 20px 23px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background-color: #DA2D33;
+    color:#fff;
+}
+.auth__button:hover {
+    background-color: #AD2328;
+    cursor: pointer;
+}

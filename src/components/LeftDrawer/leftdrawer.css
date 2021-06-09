@@ -1,0 +1,26 @@
+.left__drawer {
+  height: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  left: 0;
+  width: 90%;
+  max-width: 400px;
+  z-index: 200;
+  transform: translateX(-120%);
+  transition: transform 0.3s ease-out;
+} 
+.left__drawer.open {
+    transform: translateX(0);
+}
+ .close__burger__button{
+    font-size: 20px;
+    right: 15px;
+    margin-top: 10px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    left: auto;
+}
