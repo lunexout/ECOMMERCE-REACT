@@ -1,0 +1,25 @@
+.products__container {
+    margin-top: 25px;   
+    height: 260px; 
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 10px;
+}
+@media all and (max-width: 1024px) {
+    .products__container {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 600px; 
+    }
+}
+.productFont {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    padding-left: 2px; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');

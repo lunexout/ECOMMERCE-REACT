@@ -13,6 +13,7 @@ import {Carousel} from './components/Carousel/Carousel'
 import { useEffect, useState } from 'react';
 import { RightDrawer } from './components/RightDrawer/RightDrawer';
 import { Auth } from './components/Auth/Auth';
+import { TopProducts } from './components/TopProducts/TopProducts';
 
 // import AOS from 'aos';
 // import 'aos/dist/aos.css'; 
@@ -26,13 +27,13 @@ function App() {
   },[])
   return (
     <>
-      <div style={{ margin: '0 auto', paddingLeft: 20, paddingRight: 20}}>
+      <div style={{maxWidth: 1366, margin: '0 auto',}}>
       <div className="header__navigation">
         <div className="left__header__items">
           <div className='defFont'>
             MONDAY - FRIDAY
           </div>
-          <div className='defFont' style={{marginLeft: 30}}>
+          <div className='defFont'>
           9:00 TO 12:00
           </div>
         </div>
@@ -41,7 +42,7 @@ function App() {
             
             </div>
             <div className='defFont discount__text'>
-              <span style={{color : '#DA2D33'}}>-25%</span> Discount for all products
+              <span style={{color : '#AE8CA3'}}>-25%</span> Discount for all products
             </div>
           <div style={{width: 40, height: 2, backgroundColor: '#000', marginLeft: 20}}>
             
@@ -66,7 +67,7 @@ function App() {
         <div style={{display: 'flex', justifyContent:"center", alignItems:'center'}}>
         <img src={LOGO} style={{width: 60, height: 60, objectFit: 'contain'}}/>  
         <div style={{marginLeft: 20,fontSize: 20, letterSpacing: 2}} 
-            className="defFont logo__name">SH<span style={{color: '#DA2D33'}}>O</span>P</div>
+            className="defFont logo__name">SH<span style={{color: '#000'}}>O</span>P</div>
         <img src={SEARCH} style={{width: 25, height: 25,marginLeft: 30}}/>
         </div>
         <div style={{marginLeft: 30,display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
@@ -82,7 +83,7 @@ function App() {
         </div> */}
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',marginLeft: 5, marginRight: 5}}>
           <img src={HEART} style={{width: 30, height: 30}}/>
-          <div style={{marginLeft: 5}} className="defFont"><span style={{color: '#DA2D33'}}>WISH</span>LIST</div>
+          <div style={{marginLeft: 5}} className="defFont"><span style={{color: '#AE8CA3'}}>WISH</span></div>
         </div>
         <div onClick={() => setLeftBurgerState(true)} 
         style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',cursor: 'pointer'}}>
@@ -96,10 +97,15 @@ function App() {
         </div>
       </div>
       </div>
+      <Carousel/>
+      <TopProducts/>
       </div>
+
+
       { auth && <Auth setAuth={setAuth}/>}
       <LeftDrawer setLeftBurgerState={setLeftBurgerState} LeftBurgerState={LeftBurgerState}/>
       <RightDrawer setRightBurgerState={setRightBurgerState} RightBurgerState={RightBurgerState}/>
+      
       {/* <Carousel/>
 
       <div style={{ margin: '0 auto', paddingLeft: 20, paddingRight: 20}}>

@@ -24,3 +24,9 @@
     cursor: pointer;
     left: auto;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.product__text {
+  font-family: 'Roboto', sans-serif;
+}

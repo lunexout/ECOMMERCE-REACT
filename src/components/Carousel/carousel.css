@@ -1,0 +1,22 @@
+.swiper-image {
+    /* background-image: url("https://cdn.onoff.ge/media/thumbs/059/0597471.png"); */
+    background-image: url("./image.jpg");
+    width: 1366px; 
+    height: 361px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.swiper-image1 {
+    background-image: url("./image2.png");
+    width: 1366px; 
+    height: 361px;
+    object-fit: contain;  
+}
+/* @media all and (max-width: 810px) {
+    .swiper-image {
+        background-image: url("https://cdn.onoff.ge/media/thumbs/059/0597472.png");
+        max-width: 100%;
+        max-height: 100%;
+    }
+} */

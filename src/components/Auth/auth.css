@@ -6,10 +6,10 @@
     font-weight: bold;
     outline: none;
     border: none;
-    background-color: #DA2D33;
+    background-color: #455644;
     color:#fff;
 }
 .auth__button:hover {
-    background-color: #AD2328;
+    background-color: #2E392D;
     cursor: pointer;
 }

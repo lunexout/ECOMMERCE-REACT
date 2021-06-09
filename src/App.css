@@ -2,11 +2,13 @@
   font-family: defaultFONT;
   src: url("./fonts/FjallaOne-Regular.ttf");
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .discount__text {
   color: #000;
 }
 .defFont {
-  font-family: defaultFONT;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
 .header__navigation {
@@ -22,7 +24,7 @@
   justify-content: space-between;
 }
 .right__header__items {
-  width: 180px;
+  width: 200px;
    
   display: flex;
   justify-content: space-between;
@@ -40,6 +42,18 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+
+}
+@media all and (max-width: 1366px) {
+  .header__navigation {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navbar_navigation {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .left__navbar__navigation {
   
@@ -57,7 +71,7 @@
   display: none;
 }
 .swiper-button-prev {
-  background-color: #FFFFFF;
+  background-color: #455644;
   position: absolute !important;
   top: 120px !important;
   left: auto !important;
@@ -65,7 +79,7 @@
   border-radius: 50%;
   width: 50px !important;
   height:50px !important;
-  color: black !important;
+  color: #fff !important;
 }
 .swiper-button-next:after, .swiper-button-prev:after {
   font-size: 10px !important;
@@ -73,8 +87,8 @@
 }
 .swiper-button-next {
   font-size: 10px !important;
-  color: black !important;
-  background-color: #FFFFFF;
+  color: #fff !important;
+  background-color: #455644;
   position: absolute;
   top: 120px !important;
   left: auto !important;
@@ -88,7 +102,7 @@
     display: none;
   }
   .discount__text {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 @media all and (max-width: 560px) {

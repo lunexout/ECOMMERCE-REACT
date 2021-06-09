@@ -5,6 +5,7 @@ import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
 
 import SwiperCore, { Navigation } from "swiper/core";
+import './carousel.css'
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -12,19 +13,21 @@ SwiperCore.use([Navigation]);
 export const Carousel = () => {
   return (
     <>
-      <Swiper navigation={true} className="mySwiper" style={{marginTop: 30}}>
+      <Swiper navigation={true} className="mySwiper" style={{marginTop: 60}}>
         <SwiperSlide>
-            <div style={{width: '100%', height: 600, backgroundColor: '#F1E0CF', borderBottomRightRadius: 40}}>
-            </div>
+              {/* <img src="https://cdn.onoff.ge/media/thumbs/059/0597471.png" style={{width: 'auto', height: 'auto', objectFit: 'contain'}}/> */}
+              <div className="swiper-image">
+
+              </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div style={{width: '100%', height: 600, backgroundColor: '#F1E0CF', borderBottomRightRadius: 40}}>
-            </div>
+              <div className="swiper-image1">
+
+              </div>
         </SwiperSlide>
-        <SwiperSlide>
-            <div style={{width: '100%', height: 600, backgroundColor: '#F1E0CF', borderBottomRightRadius: 40}}>
-            </div>
-        </SwiperSlide>
+        {/* <SwiperSlide>
+              <img src="https://cdn.onoff.ge/media/thumbs/059/0597471.png" style={{width: 'auto', height: 'auto', objectFit: 'contain'}}/>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );
