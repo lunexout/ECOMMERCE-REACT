@@ -10,21 +10,16 @@ import CLOCK from './images/clock.svg'
 
 import {LeftDrawer} from './components/LeftDrawer/LeftDrawer'
 import {Carousel} from './components/Carousel/Carousel'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { RightDrawer } from './components/RightDrawer/RightDrawer';
 import { Auth } from './components/Auth/Auth';
 import { TopProducts } from './components/TopProducts/TopProducts';
 
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; 
-
 function App() {
   const [RightBurgerState, setRightBurgerState] = useState(false)
   const [LeftBurgerState, setLeftBurgerState] = useState(false)
-  const [auth,setAuth] = useState(false)
-  useEffect(() => {
-    // AOS.init();
-  },[])
+  const [auth,setAuth] = useState(false);
+
   return (
     <>
       <div style={{maxWidth: 1366, margin: '0 auto',}}>
@@ -82,17 +77,17 @@ function App() {
         {/* <div style={{width: 130}}>
         </div> */}
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',marginLeft: 5, marginRight: 5}}>
-          <img src={HEART} style={{width: 30, height: 30}}/>
+          <img src={HEART} style={{width: 20, height: 20}}/>
           <div style={{marginLeft: 5}} className="defFont"><span style={{color: '#AE8CA3'}}>WISH</span></div>
         </div>
         <div onClick={() => setLeftBurgerState(true)} 
         style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',cursor: 'pointer'}}>
-          <img src={CART} style={{width: 30, height: 30}}/>
+          <img src={CART} style={{width: 20, height: 20}}/>
           <div style={{marginLeft: 5}} className="defFont">$0.00</div>
         </div>
         <div onClick={() => setAuth(true)} 
         style={{display: 'flex',cursor: 'pointer', alignItems: 'center', justifyContent: 'space-between'}}>
-          <img src={KEY} style={{width: 30, height: 30}}/>
+          <img src={KEY} style={{width:20, height: 20}}/>
           <div style={{marginLeft: 5}} className="defFont">SIGN IN</div>
         </div>
       </div>
