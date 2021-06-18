@@ -9,7 +9,7 @@ export const products = [
       quantity: 10,
       cart_quantity: 1,
       image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/60780994171365.5e78570be33ae.jpg",
+        "http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w",
       color_images: [
         {
           1: "https://htmlcolorcodes.com/assets/images/colors/red-color-solid-background-1920x1080.png",
@@ -32,7 +32,7 @@ export const products = [
       quantity: null,
       cart_quantity: 1,
       image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/60780994171365.5e78570be33ae.jpg",
+        "http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w",
       color_images: [
         {
           1: "https://htmlcolorcodes.com/assets/images/colors/red-color-solid-background-1920x1080.png",
@@ -54,7 +54,7 @@ export const products = [
       quantity: null,
       cart_quantity: 1,
       image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/60780994171365.5e78570be33ae.jpg",
+        "http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w",
       color_images: [
         {
           1: "https://htmlcolorcodes.com/assets/images/colors/red-color-solid-background-1920x1080.png",

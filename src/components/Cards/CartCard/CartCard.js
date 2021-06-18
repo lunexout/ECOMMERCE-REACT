@@ -77,8 +77,9 @@ export const CartCard = ({ product }) => {
                 src={product.image}
                 alt=""
                 style={{
-                  height: 75,
-                  objectFit: "contain",
+                  width: 70,
+                  height: 70,
+                  objectFit: "cover",
                   borderRadius: "10px",
                 }}
               />

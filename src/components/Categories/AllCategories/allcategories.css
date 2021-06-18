@@ -1,0 +1,14 @@
+@media all and (max-width: 1366px) {
+    .header__navigation {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .navbar_navigation {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .all_categories {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+}

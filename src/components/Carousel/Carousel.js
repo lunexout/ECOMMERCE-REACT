@@ -7,14 +7,16 @@ import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Navigation } from "swiper/core";
 import './carousel.css'
 
+import css from './carouse.module.css';
+
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
 export const Carousel = () => {
   return (
     <>
-      <Swiper navigation={true} className="mySwiper" style={{marginTop: 60}}>
-        <SwiperSlide>
+      <Swiper navigation={true} className="mySwiper1" style={{marginTop: 60}}>
+        <SwiperSlide >
               {/* <img src="https://cdn.onoff.ge/media/thumbs/059/0597471.png" style={{width: 'auto', height: 'auto', objectFit: 'contain'}}/> */}
               <div className="swiper-image">
 
