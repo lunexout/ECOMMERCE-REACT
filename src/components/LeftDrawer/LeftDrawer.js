@@ -5,19 +5,19 @@ import CLOSE from "./../../images/close.svg";
 import {CartCard} from "./../Cards/CartCard/CartCard";
 
 import { useDispatch, useSelector } from 'react-redux';
-import {fetchProducts} from './../../redux/actions/fetchProducts'
+// import {fetchProducts} from '../../redux/actions/cartActions'
 
 const CartList = () => {
-    const products = useSelector(state => state.product)
+    const cartProducts = useSelector(state => state.cart)
     return(
-        products.productList ? (
-          products.productList.map(item => {
+      cartProducts.cartList.length ? (
+        cartProducts.cartList.map(item => {
             return(
                 <CartCard key={item.id} product={item}/>
             )
         })
-        ): (
-          <div>loading</div>
+        ) : (
+          <div>The cart is empty</div>
         )
     )
 }
@@ -66,7 +66,6 @@ export const LeftDrawer = ({ setLeftBurgerState, LeftBurgerState }) => {
         <div style={{ marginTop: 20, padding: 15,}}>
           <div style={{ height: "100%", maxHeight: 400, overflowY: "scroll", paddingRight: 10, }} >  
             <CartList/>
-            
           </div>
 
           <button style={{ marginTop: 20 }} className="auth__button">

@@ -10,9 +10,11 @@ import './ondeproduct.css'
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Thumbs } from "swiper/core";
 
-import HEART from './../../images/heart.svg'
+import HEART from './../../images/star (1).svg'
 import BAG from './../../images/singlebag.svg'
-
+import SALE from './../../images/sale.svg'
+import GIFT from './../../images/gift-card.svg'
+import REVIEW from './../../images/review.svg'
 // install Swiper modules
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -33,16 +35,16 @@ export const OneProduct = () => {
         className="mySwiper swiper-container1"
       >
         <SwiperSlide className='swiper-slide1' style={{ height: 200, width: 200 }}>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide style={{ height: 200, width: 200 }}>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide style={{ height: 200, width: 200 }}>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide style={{ height: 200, width: 200 }}>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
       </Swiper>
       <Swiper Swiper
@@ -56,31 +58,64 @@ export const OneProduct = () => {
         className="mySwiper2 swiper22-slide "
       >
         <SwiperSlide>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="http://static1.squarespace.com/static/59d2bea58a02c78793a95114/5a0ddb34e4966b9b7c3823a4/5e98a4f9f634725afc3a261a/1614027282486/AppleSE_HP_2x3_v2.jpg?format=1500w" />
+          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
       </Swiper>
-      <div className='left_single_div'>
-          <p style={{float: 'right', marginTop: '10px'}}><img src={HEART} style={{width: 30, height: 30}}/></p>
+      
+      <div className='left_single_div' style={{}}>
+      <p style={{float: 'right', marginTop: '10px'}}>
+        
+        
+         
+         <img src={HEART} style={{width: 30, height: 30, marginRight: 0, marginTop: -15}}/></p>
 
-          <p style={{color: '#000', }}  className="defFont">Name of product: Product Name</p>
-          <p style={{color: '#000', }}  className="defFont">Description: Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry. Lorem Ipsum has been <br/>the industry's standard dummy text ever since the 1500s</p>
+         <div style={{position: 'relative', left: 30}}>
+
+          <p style={{color: '#000',fontFamily: 'Heebo',fontSize: 30, fontWeight: 'bold'}}  className="">COMPOUD ZIP HOODIE</p>
+          <p style={{color: '#000', fontWeight: 400, fontFamily: 'Heebo',}} >Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry. Lorem Ipsum has been <br/>the industry's standard dummy text ever since the 1500s</p>
+          <div  >
+            {/* <p style={{color: '#000', }}  className="defFont">Colors:</p>  */}
+          </div>
+
+
+          <div>   
+                   <img src={SALE} style={{width: 100, height: 100, objectFit: 'cover',position: 'absolute', marginLeft: -124,zIndex: 2, marginTop: -202}} />
+          </div>
+          <div>
+            <select style={{width: 200, padding: 15, border: '1px solid lightgray',  borderRadius: 6}}>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            </select>
+          </div>
+          <div >
+            <p style={{color: '#000' }}><span style={{ fontSize: 25,fontFamily: 'Heebo',}}> $17.90 USD</span> <span style={{textDecoration: 'line-through',fontFamily: 'Heebo', color: '#EB423F'}}>$35.80 USD</span></p>
+          </div>
+
+          <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', width: 360}}>
+          <button style={{width: 400, padding: "7px 12px", display: 'flex', outline: 'none',border: 'none', borderRadius: 4,
+          alignItems: 'center', justifyContent: 'center', fontSize: 16, backgroundColor: '#5062AA',fontFamily: 'Heebo', color: '#fff'}}>Add to shopping bag<img src={BAG} style={{width: 30, marginLeft: 20}} alt="bag cart"/></button>
+
+          <button className="defFont" style={{marginLeft: 15,padding: "7px 12px", display: 'flex', outline: 'none',border: 'none', borderRadius: 4,
+          alignItems: 'center', justifyContent: 'center', fontSize: 16, backgroundColor: '#5062AA', color: '#fff'}}>
+          <img src={REVIEW} style={{width: 30, }} alt="bag cart"/></button>
+          </div>
+         </div>
+          
           <div>
             
           </div>
-          <button className="defFont" style={{width: 300, padding: "7px 12px", display: 'flex', outline: 'none', border: '1px solid black',
-          alignItems: 'center', justifyContent: 'center', fontSize: 16, backgroundColor: '#C33C54', color: '#fff'}}>Add to shopping bag<img src={BAG} style={{width: 30, marginLeft: 20}} alt="bag cart"/></button>
+          
       </div>
       <div className='left_def_div'></div>
       <div className="left_side_respo_div">

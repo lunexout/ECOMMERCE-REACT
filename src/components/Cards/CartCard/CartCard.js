@@ -8,7 +8,7 @@ import {
   addQuantity,
   deleteQuantity,
   deleteFromCart,
-} from "./../../../redux/actions/fetchProducts";
+} from "../../../redux/actions/cartActions";
 import { useDispatch } from "react-redux";
 
 export const CartCard = ({ product }) => {
@@ -74,7 +74,7 @@ export const CartCard = ({ product }) => {
           >
             <div style={{ cursor: "pointer" }}>
               <img
-                src={product.image}
+                src={product.images[0]}
                 alt=""
                 style={{
                   width: 70,

@@ -1,8 +1,10 @@
 import {combineReducers} from'redux'
 
-import {productsReducer} from './../reducers/fetchProducts'
+import {cartReducer} from './../reducers/cartReducer'
+import {fetchReducer} from './../reducers/fetchProducts'
 
 
 export const allReducers = combineReducers({
-    product: productsReducer
+    cart: cartReducer,
+    products: fetchReducer
 })

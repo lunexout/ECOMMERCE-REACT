@@ -2,9 +2,9 @@ import './../../App.css';
 import LOGO from './../../images/logo.svg'
 import SEARCH from './../../images/search.svg'
 import MENU from './../../images/menu.svg'
-import HEART from './../../images/heart.svg'
+import HEART from './../../images/star.svg'
 import CART from './../../images/cart.svg'
-import KEY from './../../images/key.svg'
+import KEY from './../../images/user.svg'
 import DELIVERY from './../../images/delivery.svg'
 import CLOCK from './../../images/clock.svg'
 
@@ -73,22 +73,34 @@ export const Header = () => {
         <img className="menu__icon" onClick={() => setRightBurgerState(true)} src={MENU} style={{width: 40, height: 40}}/>
         </div>
       </div>
-      <div className="right__navbar__navigation" style={{width: 350 , display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+      <div className="right__navbar__navigation" style={{width: 230 , display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
         {/* <div style={{width: 130}}>
         </div> */}
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',marginLeft: 5, marginRight: 5}}>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',marginLeft: 25,}}>
+          <div style={{padding: 13, backgroundColor: '#FFB0A1', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
           <img src={HEART} style={{width: 20, height: 20}}/>
-          <div style={{marginLeft: 5}} className="defFont"><span style={{color: '#C33C54'}}>WISH</span></div>
+          </div>
+          <div style={{marginLeft: 5}} className="defFont">
+            <div style={{width: 20, height: 20, position: 'absolute',marginTop: '-26px',marginLeft: -13,
+             backgroundColor: '#EB423F', zIndex: 2,display: 'flex', alignItems: 'center',fontSize: 10,color: 'white', justifyContent: 'center', borderRadius: '50%'}}> 0</div>
+          </div>
         </div>
         <div onClick={() => setLeftBurgerState(true)} 
         style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',cursor: 'pointer'}}>
+          <div style={{width: 20, height: 20, position: 'absolute',marginTop: '-30px',marginLeft: 27,
+             backgroundColor: '#EB423F', zIndex: 2,display: 'flex', alignItems: 'center',fontSize: 10,color: 'white', justifyContent: 'center', borderRadius: '50%'}}> 0</div>
+          <div style={{padding: 13, backgroundColor: '#FFB0A1', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
+            
           <img src={CART} style={{width: 20, height: 20}}/>
-          <div style={{marginLeft: 5}} className="defFont">$0.00</div>
+          </div>
+          {/* <div style={{marginLeft: 5}} className="defFont"> $00.00</div> */}
         </div>
         <div onClick={() => setAuth(true)} 
         style={{display: 'flex',cursor: 'pointer', alignItems: 'center', justifyContent: 'space-between'}}>
+          <div style={{padding: 13, backgroundColor: '#5062AA', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
           <img src={KEY} style={{width:20, height: 20}}/>
-          <div style={{marginLeft: 5}} className="defFont">SIGN IN</div>
+          </div>
+          
         </div>
       </div>
       </div>
