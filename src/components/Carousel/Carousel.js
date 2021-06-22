@@ -1,36 +1,41 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
-
-import SwiperCore, { Navigation } from "swiper/core";
 import './carousel.css'
-
-import css from './carouse.module.css';
-
-// install Swiper modules
-SwiperCore.use([Navigation]);
-
+import CATEGORIES from './../../images/categories.svg'
+import TV from './../../images/tv-monitor.svg'
 export const Carousel = () => {
   return (
     <>
-      <Swiper navigation={true} className="mySwiper1" style={{marginTop: 60}}>
-        <SwiperSlide >
-              {/* <img src="https://cdn.onoff.ge/media/thumbs/059/0597471.png" style={{width: 'auto', height: 'auto', objectFit: 'contain'}}/> */}
-              <div className="swiper-image">
-
-              </div>
-        </SwiperSlide>
-        <SwiperSlide>
-              <div className="swiper-image1">
-
-              </div>
-        </SwiperSlide>
-        {/* <SwiperSlide>
-              <img src="https://cdn.onoff.ge/media/thumbs/059/0597471.png" style={{width: 'auto', height: 'auto', objectFit: 'contain'}}/>
-        </SwiperSlide> */}
-      </Swiper>
+      <div style={{display: 'flex', justifyContent:'center', alignItems:'center',width: 215 }}>
+        <img src={CATEGORIES} style={{width: 50, height: 50}}/>
+        <p style={{marginLeft: 10,fontSize: 21,fontFamily: 'Bebas Neue',}}>Choose your category</p>
+      </div>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: 20, backgroundColor: '#F1F3F6', padding: 16, borderRadius:9,marginTop: 13}}>
+        <div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div>
+        <div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div><div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div><div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div><div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div><div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div><div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div><div className="poster_boxes">
+          <img src={TV} style={{width: 90, heigth: 90}}/>
+          <p className="poster_title" style={{margin: 0, padding: 0}}>Technic</p>
+        </div>
+      </div>
     </>
   );
 };

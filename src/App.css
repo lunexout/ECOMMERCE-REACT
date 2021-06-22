@@ -4,9 +4,25 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .discount__text {
   color: #000;
 }
+.filter__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter__list ul li {
+  font-size: 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 7px;  
+}
+.active {
+  background-color: #FFFFFF;
+}
+
 .defFont {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -131,6 +147,3 @@
     justify-content: center;
   }
 }
-
-
-

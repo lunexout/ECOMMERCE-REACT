@@ -4,16 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import {createStore} from 'redux'
+import {applyMiddleware, createStore} from 'redux'
 import {allReducers} from './redux/combineReducers'
 import { Provider } from 'react-redux';
-
 import { BrowserRouter as Router } from "react-router-dom";
+import { composeWithDevTools } from 'redux-devtools-extension'
 
-const store = createStore(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+
+const asyncFunctionMiddleware = storeAPI => next => action => {
+  if (typeof action === 'function') {
+    return action(storeAPI.dispatch, storeAPI.getState)
+  }
+  return next(action)
+}
+
+const composedEnhancer = composeWithDevTools(applyMiddleware(asyncFunctionMiddleware))
+
+
+const store = createStore( allReducers, composedEnhancer )
 
 ReactDOM.render(
   <React.StrictMode>

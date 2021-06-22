@@ -22,7 +22,8 @@ export const Header = () => {
 
   return (
     <>
-      <div style={{maxWidth: 1366, margin: '0 auto',}}>
+    <div style={{backgroundColor: 'white'}}>
+      <div style={{maxWidth: 1366, margin: '0 auto'}}>
       <div className="header__navigation">
         <div className="left__header__items">
           <div className='defFont'>
@@ -77,7 +78,7 @@ export const Header = () => {
         {/* <div style={{width: 130}}>
         </div> */}
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',marginLeft: 25,}}>
-          <div style={{padding: 13, backgroundColor: '#FFB0A1', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
+          <div style={{padding: 13, backgroundColor: '#5062AA', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
           <img src={HEART} style={{width: 20, height: 20}}/>
           </div>
           <div style={{marginLeft: 5}} className="defFont">
@@ -89,7 +90,7 @@ export const Header = () => {
         style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',cursor: 'pointer'}}>
           <div style={{width: 20, height: 20, position: 'absolute',marginTop: '-30px',marginLeft: 27,
              backgroundColor: '#EB423F', zIndex: 2,display: 'flex', alignItems: 'center',fontSize: 10,color: 'white', justifyContent: 'center', borderRadius: '50%'}}> 0</div>
-          <div style={{padding: 13, backgroundColor: '#FFB0A1', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
+          <div style={{padding: 13, backgroundColor: '#5062AA', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
             
           <img src={CART} style={{width: 20, height: 20}}/>
           </div>
@@ -128,6 +129,7 @@ export const Header = () => {
           <div style={{width: 400, border: '1px solid green'}}></div>
         </div>
       </div> */}
+      </div>
       </>
     )
 }
