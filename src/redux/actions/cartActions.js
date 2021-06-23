@@ -10,9 +10,15 @@ export const deleteQuantity = (product) => {
         product
     }
 }
+export const addCart = (product) => {
+    return {
+        type: 'ADD_CART',
+        product
+    }
+}
 export const deleteFromCart = (product) => {
     return {
-        type: 'DELETE_FROM_CART',
+        type: 'REMOVE_CART',
         product
     }
 }

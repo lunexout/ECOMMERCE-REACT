@@ -147,3 +147,18 @@
     justify-content: center;
   }
 }
+@media all and (max-width: 1024px) {
+  .product__list__item {
+    margin-top:  17px;
+  }
+  .poster_boxes {
+    margin-top:  17px;
+  }
+  .product__list__item__cart {
+    margin-left: 20px;
+  }
+  .product__list__item__star {
+    margin-left: 20px;
+
+  }
+}

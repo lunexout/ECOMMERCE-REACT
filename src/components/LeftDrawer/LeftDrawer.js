@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import {fetchProducts} from '../../redux/actions/cartActions'
 
 const CartList = () => {
-    const cartProducts = useSelector(state => state.cart)
+    const cartProducts = useSelector(state => state.cart);
     return(
       cartProducts.cartList.length ? (
         cartProducts.cartList.map(item => {
@@ -23,7 +23,7 @@ const CartList = () => {
 }
 
 export const LeftDrawer = ({ setLeftBurgerState, LeftBurgerState }) => {
-
+  const total = useSelector(state => state.cart.total);
   let drawerClasses = "left__drawer";
   if (LeftBurgerState) { drawerClasses = "left__drawer open"; }
 
@@ -69,7 +69,7 @@ export const LeftDrawer = ({ setLeftBurgerState, LeftBurgerState }) => {
           </div>
 
           <button style={{ marginTop: 20 }} className="auth__button">
-            Proceed Checkout $ 0.00
+            Proceed Checkout $ {Math.round((total + Number.EPSILON) * 100) / 100}
           </button>
         </div>
       </div>

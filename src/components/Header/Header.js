@@ -13,12 +13,15 @@ import { useState } from 'react';
 import { RightDrawer } from './../RightDrawer/RightDrawer';
 import { Auth } from './../Auth/Auth';
 
+import { useSelector } from 'react-redux';
 import {NavLink} from "react-router-dom";
 
 export const Header = () => {
   const [RightBurgerState, setRightBurgerState] = useState(false)
   const [LeftBurgerState, setLeftBurgerState] = useState(false)
   const [auth,setAuth] = useState(false);
+
+  const cartList = useSelector(state => state.cart)
 
   return (
     <>
@@ -63,14 +66,23 @@ export const Header = () => {
         <div style={{display: 'flex', justifyContent:"center", alignItems:'center'}}>
         <img src={LOGO} style={{width: 60, height: 60, objectFit: 'contain'}}/>  
         <div style={{marginLeft: 20,fontSize: 20, letterSpacing: 2}} 
-            className="defFont logo__name"><NavLink to="/" style={{textDecoration: 'none', color: '#000'}}>SH<span style={{color: '#000'}}>O</span>P</NavLink></div>
-        <img src={SEARCH} style={{width: 25, height: 25,marginLeft: 30}}/>
+            className="defFont logo__name"><NavLink to="/" style={{textDecoration: 'none', color: '#000'}}>billie</NavLink></div>
         </div>
-        <div style={{marginLeft: 30,display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-        <div className="defFont nav__items">ENGAGMENT</div>
+        <div style={{marginLeft: 0,display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+        {/* <div style={{display: 'flex',alignItems:'center',justifyContent:'center',paddingLeft:30, position:'relative'}}></div>
+          <div style={{display: 'flex',alignItems:'center',justifyContent:'center',paddingLeft:30, position:'relative'}}>
+          <img src={SEARCH} style={{width: 35, height: 35,position:'absolute',left:40, transform: "rotate(45deg)"}}/>
+
+          <input type='text' style={{width:'100%',outline: 'none',border:'none',
+          height: 50, backgroundColor: '#F1F3F6', borderRadius: 30,paddingLeft:60}}>
+        
+        </input>
+        </div> */}
+        {/* <div className="defFont nav__items">ENGAGMENT</div>
         <div className="defFont nav__items">DESIGNERS</div>
-        <div className="defFont nav__items">WATCHERS</div>
-        <div className="defFont nav__items"><NavLink to="/all/categories" activeClassName="active_navlink" className='nav__item__link' >ALL CATEGORIES</NavLink></div>
+        <div className="defFont nav__items">WATCHERS</div> */}
+
+        {/* <div className="defFont nav__items"><NavLink to="/all/categories" activeClassName="active_navlink" className='nav__item__link' >ALL CATEGORIES</NavLink></div> */}
         <img className="menu__icon" onClick={() => setRightBurgerState(true)} src={MENU} style={{width: 40, height: 40}}/>
         </div>
       </div>
@@ -89,7 +101,8 @@ export const Header = () => {
         <div onClick={() => setLeftBurgerState(true)} 
         style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',cursor: 'pointer'}}>
           <div style={{width: 20, height: 20, position: 'absolute',marginTop: '-30px',marginLeft: 27,
-             backgroundColor: '#EB423F', zIndex: 2,display: 'flex', alignItems: 'center',fontSize: 10,color: 'white', justifyContent: 'center', borderRadius: '50%'}}> 0</div>
+             backgroundColor: '#EB423F', zIndex: 2,display: 'flex', alignItems:
+              'center',fontSize: 10,color: 'white', justifyContent: 'center', borderRadius: '50%'}}>{cartList.cartList.length}</div>
           <div style={{padding: 13, backgroundColor: '#5062AA', display: 'flex', justifyContent: 'center', alignItems: 'center',borderRadius: 6}}>
             
           <img src={CART} style={{width: 20, height: 20}}/>

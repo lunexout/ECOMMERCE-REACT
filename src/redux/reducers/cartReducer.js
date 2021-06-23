@@ -1,48 +1,65 @@
-import { products } from "../../json/products";
 let initialState = {
   cartList: [],
+  total: 0,
 };
 export const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_QUANTITY": {
-    //   const index = state.productList.findIndex( (el) => el.id === action.product.id );
-      const productList = state.productList.map((item, i) => { 
+      const cartList = state.cartList.map((item, i) => { 
           if(item.id === action.product.id) {
-            if(item.quantity === action.product.cart_quantity) { } else {  return { ...item, cart_quantity: item.cart_quantity + 1 } }
+            if(item.quantity === action.product.cart_quantity) { }
+            else { 
+              state.total += action.product.price; 
+              return { ...item, cart_quantity: item.cart_quantity + 1 }
+            }
           }
           return item
       })
       return {
         ...state,
-        productList: productList
+        cartList: cartList
       }
     }
     case "DELETE_QUANTITY": {
-      const index = state.productList.findIndex(
-        (el) => el.id === action.product.id
-      );
-      const productList = state.productList.map((item, i) => { 
+      const cartList = state.cartList.map((item, i) => { 
         if(item.id === action.product.id) {
-          if(1 === action.product.cart_quantity) { } else {  return { ...item, cart_quantity: item.cart_quantity - 1 } }
+          if(1 === action.product.cart_quantity) { }
+          else {
+            state.total -= action.product.price;  
+            return { ...item, cart_quantity: item.cart_quantity - 1 }
+          }
         }
         return item
       })
       return {
         ...state,
-        productList: productList
+        cartList: cartList
       };
     }
-    case "DELETE_FROM_CART": {
-      const index = state.productList.findIndex(
+    case "ADD_CART": {
+      state.total += action.product.price;
+      action.product.isAdd = true;
+      state.cartList.push(action.product)
+      return {
+        ...state, cartList: state.cartList };
+    }
+    case "REMOVE_CART": {
+      if(state.cartList.length === 1) {
+        state.total = 0;
+      }else {
+        state.total = state.total - (action.product.cart_quantity * action.product.price);
+      }
+      action.product.isAdd = false;
+      const index = state.cartList.findIndex(
         (item) => item.id === action.product.id
       );
       return {
         ...state,
-        productList: state.productList.filter((_, i) => i !== index),
+        cartList: state.cartList.filter((_, i) => i !== index),
       };
     }
     default: {
-      return { ...state, productList: products };
+      return { ...state };
     }
   }
 };

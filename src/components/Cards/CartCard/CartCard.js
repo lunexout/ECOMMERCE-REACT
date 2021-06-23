@@ -10,10 +10,10 @@ import {
   deleteFromCart,
 } from "../../../redux/actions/cartActions";
 import { useDispatch } from "react-redux";
-
 export const CartCard = ({ product }) => {
   const dispatch = useDispatch();
   const [animation, setAnimation] = useState(false);
+
 
   const RenderAnimation = ({children}) => {
     if (animation) {
@@ -74,7 +74,7 @@ export const CartCard = ({ product }) => {
           >
             <div style={{ cursor: "pointer" }}>
               <img
-                src={product.images[0]}
+                src={product.image}
                 alt=""
                 style={{
                   width: 70,
@@ -86,7 +86,7 @@ export const CartCard = ({ product }) => {
             </div>
             <div style={{ marginLeft: 10 }}>
               <h1 style={{ fontWeight: "bold", fontSize: 15, margin: 0 }}>
-                {product.name}
+                {product.title}
               </h1>
               <p style={{ marginTop: 25 }}>$ {product.price}</p>
             </div>
