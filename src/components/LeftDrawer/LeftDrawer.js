@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { } from "react";
 import "./leftdrawer.css";
 
 import CLOSE from "./../../images/close.svg";
 import {CartCard} from "./../Cards/CartCard/CartCard";
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 // import {fetchProducts} from '../../redux/actions/cartActions'
 
 const CartList = () => {

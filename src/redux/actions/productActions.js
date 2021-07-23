@@ -8,7 +8,7 @@ export const fetchPopular = () => {
       return response.data;
     })
     .then((data) => {
-      data.map(item => {item.isAdd = false; item.cart_quantity = 1})
+      data.map((item) => {item.isAdd = false; item.cart_quantity = 1})
       dispatch({
         type: "FETCH_POPULAR",
         payload: data
@@ -19,9 +19,10 @@ export const fetchPopular = () => {
     });
   }
 };
-export const filterBy = (payload) => {
+export const filterBy = (payload, category = '') => {
   return {
     type: 'FILTER_BY',
-    payload
+    payload,
+    category,
   }
 }

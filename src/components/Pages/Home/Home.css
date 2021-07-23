@@ -1,0 +1,13 @@
+.prod-img-cont {
+    width: 120px !important;
+    padding: 15px; 
+}
+@media all and (max-width: 500px) {
+    .prod-img {
+        width: 50px !important;
+    }
+    .prod-img-cont {
+        width: 60px !important;
+        padding: 15px; 
+    }
+}

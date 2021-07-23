@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import KEY from '../../images/padlock.svg'
 import EMAIL from '../../images/email.svg'
 import CLOSE from '../../images/close.svg'
@@ -8,12 +8,16 @@ import './auth.css'
 export const Auth = ({setAuth}) => {
     return (
         <>  
-            <div style={{height: 300,width:300,
+        <div className="card__background__container"></div>
+            <div className="card__container">
+            <div style={{height: "30rem",width:"30rem",
+            maxWidth: "100%",
                 zIndex: 99,
-                padding: 5,borderRadius: 5,border: '0.5px solid #DEDED7',margin: '0 auto',marginTop: 80}}>
-                <div onClick={() => setAuth(false)} style={{display: 'flex', justifyContent:'center',
-                cursor: 'pointer', alignItems: 'center',marginBottom: 20,marginTop: 10}}>
-                    <img style={{width: 30, height: 30}} src={CLOSE}/>
+              
+              borderRadius: "0.5rem", backgroundColor: "white",border: '0.5px solid #DEDED7',margin: '0 auto',display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", position: 'relative'}}>
+                    {/* <div className="container__title__auth">LOGIN</div> */}
+                <div onClick={() => setAuth(false)}>
+                    <img className='close__button' src={CLOSE} width='28' onClick={() => { document.body.classList.remove("none__body__scroll"); }} alt='' />
                 </div>
                 {/* <div style={{width: 240,margin: '0 auto',display:'flex', justifyContent: 'space-between',
                 alignItems: 'center',flexWrap: 'wrap'
@@ -34,7 +38,7 @@ export const Auth = ({setAuth}) => {
                         </div>
                     </div>
                 </div> */}
-                <div style={{width: 275,margin: '0 auto',
+                <div style={{width: "90%",margin: '0 auto',
                     display: 'flex', alignItems: 'center'
                 }}>
                     <div style={{width: 100,height: 55,
@@ -44,7 +48,7 @@ export const Auth = ({setAuth}) => {
                     borderTopLeftRadius: 4,
                     borderRight: 'none',
                     backgroundColor:'#F4F4F4'}}>
-                    <img style={{width:16, height: 19,}} src={EMAIL}/>
+                    <img style={{width:16, height: 19,}} src={EMAIL} alt=''/>
                     </div>
                     <input type='email' placeholder='email@example.com' style={{width: '100%', padding: 20,
                         borderBottomRightRadius: 4,
@@ -58,7 +62,7 @@ export const Auth = ({setAuth}) => {
                     </input>
                 </div>
 
-                <div style={{width: 275,margin: '0 auto',marginTop: 10,height: 55,
+                <div style={{width: "90%",margin: '0 auto',marginTop: 10,height: 55,
                     display: 'flex', alignItems: 'center'
                 }}>
                     <div style={{width: 100,height: '100%',
@@ -68,9 +72,9 @@ export const Auth = ({setAuth}) => {
                     borderTopLeftRadius: 4,
                     borderRight: 'none',
                     backgroundColor:'#F4F4F4'}}>
-                    <img style={{width:20, height: 19,}} src={KEY}/>
+                    <img style={{width:20, height: 19,}} src={KEY} alt=''/>
                     </div>
-                    <input type="password" placeholder='password' style={{width: '100%', padding: 20,
+                    <input type="password" placeholder='Password' style={{width: '100%', padding: 20,
                         borderBottomRightRadius: 4,
                         borderTopRightRadius: 4,
                         borderTopLeftRadius: 0,
@@ -80,16 +84,17 @@ export const Auth = ({setAuth}) => {
 
                     </input>
                 </div>
-                <div style={{width: 275, margin: '0 auto', fontSize: 11, fontWeight: 500, color: '#666665'}}>
+                <div style={{width: "90%", margin: '0 auto', fontSize: 11, cursor: "pointer",fontWeight: 500, color: '#666665'}}>
                 <p>
                     Forgot password?
                 </p>
                 </div>
-                <div style={{width: 275, margin: '0 auto',display: 'flex', justifyContent: 'flex-end'}}>
+                <div style={{width: "90%", margin: '0 auto',display: 'flex', justifyContent: 'flex-end'}}>
                     <button className="auth__button">
                         Authorization
                     </button>
                 </div>
+            </div>
             </div>
         </>
     )

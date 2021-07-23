@@ -13,7 +13,7 @@ import SwiperCore, { Navigation, Thumbs } from "swiper/core";
 import HEART from './../../images/star (1).svg'
 import BAG from './../../images/singlebag.svg'
 import SALE from './../../images/sale.svg'
-import GIFT from './../../images/gift-card.svg'
+// import GIFT from './../../images/gift-card.svg'
 import REVIEW from './../../images/review.svg'
 // install Swiper modules
 SwiperCore.use([Navigation, Thumbs]);
@@ -35,16 +35,16 @@ export const OneProduct = () => {
         className="mySwiper swiper-container1"
       >
         <SwiperSlide className='swiper-slide1' style={{ height: 200, width: 200 }}>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide style={{ height: 200, width: 200 }}>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide style={{ height: 200, width: 200 }}>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide style={{ height: 200, width: 200 }}>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
       </Swiper>
       <Swiper Swiper
@@ -58,16 +58,16 @@ export const OneProduct = () => {
         className="mySwiper2 swiper22-slide "
       >
         <SwiperSlide>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
+          <img alt='' src="https://fdn.gsmarena.com/imgroot/news/20/11/iphone-12-pro-max-just-in/-1200w5/gsmarena_001.jpg" />
         </SwiperSlide>
       </Swiper>
       
@@ -76,7 +76,7 @@ export const OneProduct = () => {
         
         
          
-         <img src={HEART} style={{width: 30, height: 30, marginRight: 0, marginTop: -15}}/></p>
+         <img alt='' src={HEART} style={{width: 30, height: 30, marginRight: 0, marginTop: -15}}/></p>
 
          <div style={{position: 'relative', left: 30}}>
 
@@ -88,7 +88,7 @@ export const OneProduct = () => {
 
 
           <div>   
-                   <img src={SALE} style={{width: 100, height: 100, objectFit: 'cover',position: 'absolute', marginLeft: -124,zIndex: 2, marginTop: -202}} />
+                   <img alt='' src={SALE} style={{width: 100, height: 100, objectFit: 'cover',position: 'absolute', marginLeft: -124,zIndex: 2, marginTop: -202}} />
           </div>
           <div>
             <select style={{width: 200, padding: 15, border: '1px solid lightgray',  borderRadius: 6}}>
@@ -104,7 +104,8 @@ export const OneProduct = () => {
 
           <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', width: 360}}>
           <button style={{width: 400, padding: "7px 12px", display: 'flex', outline: 'none',border: 'none', borderRadius: 4,
-          alignItems: 'center', justifyContent: 'center', fontSize: 16, backgroundColor: '#5062AA',fontFamily: 'Heebo', color: '#fff'}}>Add to shopping bag<img src={BAG} style={{width: 30, marginLeft: 20}} alt="bag cart"/></button>
+          alignItems: 'center', justifyContent: 'center', fontSize: 16, backgroundColor: '#5062AA',fontFamily: 'Heebo', color: '#fff'}}>Add to shopping bag
+          <img src={BAG} style={{width: 30, marginLeft: 20}} alt="bag cart"/></button>
 
           <button className="defFont" style={{marginLeft: 15,padding: "7px 12px", display: 'flex', outline: 'none',border: 'none', borderRadius: 4,
           alignItems: 'center', justifyContent: 'center', fontSize: 16, backgroundColor: '#5062AA', color: '#fff'}}>

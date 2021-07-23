@@ -23,6 +23,10 @@
   background-color: #FFFFFF;
 }
 
+.none__body__scroll {
+  overflow: hidden;
+}
+
 .defFont {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
